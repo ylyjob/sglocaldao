@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sglocaldao:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sg-local-dao.war">
+      <element id="artifact" artifact-name="sglocaldao:war exploded" />
+    </root>
+  </artifact>
+</component>

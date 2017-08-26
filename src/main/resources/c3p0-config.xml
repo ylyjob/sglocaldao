@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+    <!--下面是两个数据源头-->
+
+    <!--默认的设置了nd数据库的连接-->
+    <!--ComboPooledDataSource dataSource=new ComboPooledDataSource();-->
+
+    <!--下面是本地的连接-->
+    <!--ComboPooledDataSource的参数为named-config name的值-->
+    <!--ComboPooledDataSource dataSource=new ComboPooledDataSource("localmysql);-->
+
+    <default-config>
+        <property name="driverClass">com.mysql.fabric.jdbc.FabricMySQLDriver</property>
+        <property name="jdbcUrl">
+            jdbc:mysql:fabric://s1.rds.sdp.nd:32271/dev_mysql_sg_demo?fabricServerGroup=my_group_s2_3306&amp;fabricUsername=admin&amp;fabricPassword=ZB5dGGTJtsC8t7OQ&amp;autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF8
+        </property>
+        <property name="user">user_44nSrpnrjS</property>
+        <property name="password">nP0AOkdQNj</property>
+        <property name="initialPoolSize">5</property>
+        <property name="maxPoolSize">20</property>
+    </default-config>
+
+    <named-config name="localmysql">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/servicemanagement</property>
+        <property name="user">root</property>
+        <property name="password">097210</property>
+        <property name="initialPoolSize">5</property>
+        <property name="maxPoolSize">20</property>
+    </named-config>
+</c3p0-config>
