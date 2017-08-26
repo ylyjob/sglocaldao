@@ -48,6 +48,17 @@ public class ServiceStatusDao {
         }
     }
 
+    //给某个表添加外键
+    @Test
+    public void addFOREIGNKEY(){
+        try {
+            String sql="ALTER TABLE d123 ADD CONSTRAINT yluy FOREIGN KEY (ServiceState) REFERENCES servicestatus (ServiceState)";
+            qr.update(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
 
